@@ -7,17 +7,30 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Mark Pohil</title>
+		<title>Mark Pokhil</title>
 		<style>
-			dd > img { min-width:30%; }
-			@media only screen and (max-width: 765px){
-				dd { 
+			body {
+				margin: auto;
+				width: 50%;
+				box-sizing: border-box;
+			}
+			dd > img {
+				margin: 1em 0;
+				width: 50%;
+			}
+			@media only screen and (max-width: 765px) {
+				body {
+					width: 100%;
+					padding: 1em;
+				}
+				dd {
 					padding-left: 1em;
 					border-left: 2px solid lightgrey;
 					box-sizing: border-box;
-					margin-left: 0; 
+					margin-left: 0;
 				}
-				img {
+				img,
+				dd > img {
 					width: 100%;
 				}
 			}
@@ -26,17 +39,20 @@
 	<header>
 		<div>
 			<img src="/s/avatar.png" alt="avatar" />
-			<h1>Mark Pohil</h1>
+			<h1>Mark Pokhil</h1>
 		</div>
-		<dl>
-			<strong>About me:</strong>
-			<dt>
-				What I think other people think about me:
-			</dt>
-			<dd>Nerd, boomer, coward, shut-in, single</dd>
-			<dt>What I think about myself:</dt>
-			<dd>Oldfag, single, coder, weeb?..</dd>
-		</dl>
+		<div>
+			<dl>
+				<strong>About me:</strong>
+				<dt>
+					What I think other people think about
+					me:
+				</dt>
+				<dd>Nerd, boomer, coward, shut-in, single</dd>
+				<dt>What I think about myself:</dt>
+				<dd>Oldfag, single, coder, weeb?..</dd>
+			</dl>
+		</div>
 	</header>
 	<body>
 		<section style="text-align: justify;">
