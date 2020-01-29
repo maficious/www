@@ -7,7 +7,7 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Mark Pokhil</title>
+		<title>◥◣ Mark Pokhil ◢◤</title>
 		<style>
 			body {
 				margin: auto;
@@ -21,7 +21,7 @@
 			section {
 				text-align: justify;
 			}
-			dd > table {
+			table {
 				width: 100%;
 				table-layout: fixed;
 				text-align: center;
@@ -45,87 +45,24 @@
 			}
 		</style>
 	</head>
-	<header>
-		<table style="width: 100%">
-			<tr>
-				<td rowspan="2">
-					<img src="/s/avatar.png" alt="avatar" />
-				</td>
-				<td>
-					<h1>Mark Pokhil</h1>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<dl>
-						<strong>About me:</strong>
-						<dt>
-							What I think other
-							people think about me:
-						</dt>
-						<dd>
-							Nerd, boomer, coward,
-							shut-in, single
-						</dd>
-						<dt>
-							What I think about
-							myself:
-						</dt>
-						<dd>
-							Oldfag, single, coder,
-							weeb?..
-						</dd>
-					</dl>
-				</td>
-			</tr>
-		</table>
+	<header style="text-align: center;">
+		<img
+			width="150"
+			src="/s/avatar.png"
+			alt="Mark Pokhil"
+			title="My Avatar"
+		/>
+		<h1>Mark Pokhil</h1>
+		<p>Location: Varna, Bulgaria</p>
 	</header>
-	<!--
-						)
-				)      ((     (
-				(        ))     )
-			)       )      //     (
-		_   (        __    (     ~->>
-		,-----' |__,_~~___<'__`)-~__--__-~->> <
-		| //  : | -__   ~__ o)____)),__ - '> >-  >
-		| //  : |- \_ \ -\_\ -\ \ \ ~\_  \ ->> - ,  >>
-		| //  : |_~_\ -\__\ \~'\ \ \, \__ . -<-  >>
-		`-----._| `  -__`-- - ~~ -- ` --~> >
-		_/___\_    //)_`//  | ||]
-	_____[_______]_[~~-_ (.L_/  ||
-	[____________________]' `\_,/'/
-	||| /          |||  ,___,'./
-	||| \          |||,'______|
-	||| /          /|| I==||
-	||| \       __/_||  __||__
-	-----||-/------`-._/||-o--o---o---
-	~~~~~'
-
-	   ______________________________
-	 / \                             \.
-	|   |                            |.
-	 \_ |                            |.
-	    |                            |.
-	    |     JavaScript should      |.
-	    |      not be forgiven       |.
-	    |      for thousands of      |.
-	    |    corrupted developers    |.
-	    |                            |.
-	    |                            |.
-	    |                            |.
-	    |                            |.
-	    |                            |.
-	    |                            |.
-	    |   _________________________|___
-	    |  /                            /.
-	    \_/____________________________/.
-	-->
 	<body>
-		<section>
-			<h1>Skills</h1>
+		<section id="Skills">
+			<h1><a href="#Skills">§</a> Skills</h1>
 			<p>A <em>bit</em> about my skills:</p>
 			<dl>
-				<dt>Full-stack development:</dt>
+				<dt>
+					Full-stack development:
+				</dt>
 				<dd>
 					<table>
 						<tr>
@@ -150,7 +87,9 @@
 						</tr>
 					</table>
 				</dd>
-				<dt>Programming languages:</dt>
+				<dt>
+					Programming languages:
+				</dt>
 				<dd>
 					<table>
 						<tr>
@@ -218,8 +157,8 @@
 				</dd>
 			</dl>
 		</section>
-		<section>
-			<h1>Hobbies</h1>
+		<section id="Hobbies">
+			<h1><a href="#Hobbies">§</a> Hobbies</h1>
 			<p>A <em>few</em> words about my hobbies:</p>
 			<dl>
 				<dt>Drawing</dt>
@@ -236,6 +175,7 @@
 					<img
 						src="/s/drawing.gif"
 						alt="drawing gif"
+						title="Drawing"
 					/>
 				</dd>
 				<dt>Kendo (1 kyu)</dt>
@@ -247,6 +187,7 @@
 					<img
 						src="/s/kendo.gif"
 						alt="kendo gif"
+						title="Kendo"
 					/>
 				</dd>
 				<dt>Programming</dt>
@@ -261,6 +202,7 @@
 					<img
 						src="/s/programming.gif"
 						alt="programming gif"
+						title="Programming"
 					/>
 				</dd>
 				<dt>Gaming</dt>
@@ -281,6 +223,7 @@
 					<img
 						src="/s/gaming.gif"
 						alt="gaming gif"
+						title="Gaming"
 					/>
 				</dd>
 				<dt>Music</dt>
@@ -303,6 +246,7 @@
 					<img
 						src="/s/music.gif"
 						alt="listening to music gif"
+						title="Music"
 					/>
 				</dd>
 			</dl>
@@ -310,22 +254,38 @@
 	</body>
 
 	<footer style="text-align: center;">
-		<ul style="list-style: none; padding: 0;">
-			<li>
-				<a
-					href="https://github.com/maficious"
-					title="My GitHub Profile"
-					>GitHub</a
-				>
-			</li>
-			<li>
-				<a
-					href="https://www.linkedin.com/in/mark-pokhil/"
-					title="My LinkedIn Profile"
-					>LinkedIn</a
-				>
-			</li>
-		</ul>
+		<table>
+			<td>
+				<ul style="list-style: none; padding: 0;">
+					<li>
+						<a href="#Skills">
+							Skills
+						</a>
+					</li>
+					<li>
+						<a href="#Hobbies">Hobbies</a>
+					</li>
+				</ul>
+			</td>
+			<td>
+				<ul style="list-style: none; padding: 0;">
+					<li>
+						<a
+							href="https://github.com/maficious"
+							title="My GitHub Profile"
+							>GitHub</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www.linkedin.com/in/mark-pokhil/"
+							title="My LinkedIn Profile"
+							>LinkedIn</a
+						>
+					</li>
+				</ul>
+			</td>
+		</table>
 		<p>Mark Pokhil ©️ 2020</p>
 	</footer>
 </html>
