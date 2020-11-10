@@ -1,0 +1,69 @@
+body
+{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+div.profile
+{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 1rem;
+	display: block;
+
+	box-sizing: border-box;
+	border: 2px solid lightgrey;
+	background-color: white;
+}
+
+.social-row
+{
+	display: block;
+	margin: auto;
+	padding: 0 3rem;
+}
+
+div.profile > h1
+{
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.social-icon
+{
+	width: 20px;
+	height: 20px;
+}
+
+.social-icon-anchor
+{
+	display:inline-block;
+}
+
+.portrait
+{
+	display: block;
+	border-radius: 100%;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+.floating-image
+{
+	display: block;
+	position: absolute;
+	height: 350px;
+
+	top: -64%;
+	left: 30%;
+
+	/* acnhor point in center */
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
