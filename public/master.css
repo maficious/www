@@ -37,7 +37,7 @@ body
 div.profile
 {
 	--vertical-space: 1rem;
-	--side-margin: 2.5rem;
+	--side-margin: 3.5rem;
 
 	display: grid;
 	grid-template-columns: auto;
