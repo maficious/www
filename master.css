@@ -1,0 +1,120 @@
+@import '/fonts/inter.css';
+
+:root {
+    --universal-spacing: 1em;
+    --links-color: black;
+    --font-family: "Inter Var", sans-serif;
+    --mono-font-family: "Consolas", "Monaco", monospace;
+    --font-size: 12pt;
+}
+
+html {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    width: 100%;
+    background-color: white;
+}
+
+body {
+    /* background-color: rgb(243, 243, 243); */
+    width: 80ch;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+header, footer {
+    padding: var(--universal-spacing) 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2;
+}
+
+footer {
+    display: block;
+    font-size: smaller;
+}
+
+header nav a:not(a:last-child) {
+    margin-right: var(--universal-spacing);
+}
+
+a {
+    font-size: inherit;
+    color: var(--links-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--links-color);
+}
+
+a:hover { border-bottom-color: transparent; }
+
+header a       { border-bottom-color: transparent; }
+header a:hover { border-bottom-color: var(--links-color); }
+
+main {
+    flex-shrink: 0;
+    width: 60ch;
+    margin: auto;
+}
+
+article {
+    margin: calc(var(--universal-spacing) * 4) 0;
+}
+
+p {
+    margin: var(--universal-spacing) 0;
+    line-height: 1.5;
+}
+
+h2 {
+    margin-top: calc(var(--universal-spacing) / 3);
+}
+
+pre, code {
+    font-family: var(--mono-font-family);
+    background-color: #e4e4e4;
+}
+
+code:not(pre code) {
+    /* margin: 0 calc(var(--universal-spacing) / 5); */
+    padding: 0 calc(var(--universal-spacing) / 3);
+}
+
+pre {
+    line-height: 1.4;
+    width: 100%;
+    padding: var(--universal-spacing) 2ch;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+img, video {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    /* max-height: 50vh; */
+}
+
+.max-height-override {
+    max-height: none;
+}
+
+/* video:not(video:fullscreen) {
+    border-radius: calc(var(--universal-spacing) / 2);
+} */
+
+figcaption {
+    text-align: center;
+    font-size: smaller;
+    color: #868686;
+    font-weight: 600;
+    margin: calc(var(--universal-spacing) / 2) 0;
+}
+
+pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+pre::-webkit-scrollbar-thumb {
+    background-color: #c7c7c7;
+}
