@@ -16,12 +16,17 @@
         <nav><a href="/stuff">That stuff I do when bored</a><a href="/about">About me</a></nav>
     </header>
     <main>
-        <article>
-            <h1><a href="/post/first-post.html">First post?</a></h1>
-            <h2>2021-03-15 13:56:35</h2>
-            <p>Hello, my first post eh... Well, nothing to say really, I am just happy to have a place to shout
-                publicly, but not knowing whether someone hears it. Happiness in ignorance.</p>
-        </article>
+        <img src="/about/images/temporary-avatar.png" alt="Mua" style="border-radius: 9999px;">
+        <p>
+            I am <span id="age"></span> years old and I like to do various stuff with computers. (Breaking them too.)
+            I tried a variety of languages, but so far I am most proficient in Python and JavaScript, with C# catching
+            up.
+        </p>
+        <script>
+            bornAt = new Date(2002, 11, 23, 00, 00, 00, 00).getFullYear();
+            today = new Date().getFullYear();
+            document.querySelector("#age").textContent = today - bornAt;
+        </script>
     </main>
     <footer>
         © Copyright Mark Pokhil 2021 <a href="https://www.linkedin.com/in/mark-pokhil/" target="_blank">LinkedIn</a> <a
