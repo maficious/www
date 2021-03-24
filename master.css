@@ -3,7 +3,7 @@
 :root {
     --universal-spacing: 1em;
     --links-color: black;
-    --font-family: "Inter Var", sans-serif;
+    --font-family: "Inter Var", "Ubuntu", "Noto Sans", "Helvetica Neue", "Arial", sans-serif;
     --mono-font-family: "Consolas", "Monaco", monospace;
     --font-size: 12pt;
 }
@@ -18,6 +18,7 @@ html {
 body {
     /* background-color: rgb(243, 243, 243); */
     width: 80ch;
+    min-height: 100vh;
     margin: auto;
     display: flex;
     flex-flow: column;
@@ -64,6 +65,10 @@ article {
 p {
     margin: var(--universal-spacing) 0;
     line-height: 1.5;
+}
+
+em {
+    font-style: italic;
 }
 
 article h2 {
