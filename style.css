@@ -1,1 +1,120 @@
-a.btn,ul.tags,header#main-header details nav h1{line-height:1}a.btn,article.post-list,img,ul.tags li,header#main-header details nav section,header#main-header details{border-radius:.25rem}footer,article.post-list header,article.post-list,ul.tags,main,body{display:flex}footer,article.post-list,main,body{flex-direction:column}body{width:40%;min-height:100vh;margin:auto}.table-wrapper{overflow-x:auto}header#main-header{padding:1rem 0}header#main-header h1{margin-bottom:1rem}header#main-header details{padding:.75rem;background-color:#e6e6e6}header#main-header details summary{margin-bottom:.20rem}header#main-header details nav{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.375rem}header#main-header details nav h1{margin-bottom:.2rem}header#main-header details nav section{margin-top:.375rem;padding:.375rem;background-color:#f7f7f7}main{gap:.5rem;flex:1 1 100%}div.error{font-size:24px;text-align:center}.list-reset,ul.footer-minilist,ul.nav-section-list,ul.tags{padding:0;margin-bottom:0}ul.tags{flex-wrap:wrap;gap:.5rem;list-style:none;padding:0}ul.tags li{background-color:#e6e6e6;padding:.2rem .5rem}ul.nav-section-list{list-style:square inside}ul.footer-minilist li{display:inline}ul.footer-minilist li:not(ul.footer-minilist li:last-child){margin-right:.5rem}img{max-width:100%}#quick-about-me{display:grid;grid-template-columns:1fr 35%;gap:1rem;margin-bottom:1rem}article.post-list{background-color:#f7f7f7;gap:.5rem;padding:.2rem .9rem .9rem .9rem}article.post-list:not(article.post-list:last-child){margin-bottom:1rem}article.post-list header{justify-content:space-between;align-items:baseline}article.post-list header h1{margin-bottom:0}small.categories-list a:not(small.categories-list a:last-child){margin-right:.25rem}a.btn{background-color:dodgerblue;color:white;padding:.25rem 1rem;max-width:min-content}a.btn:hover{background-color:#0077ea}footer{padding:1rem;text-align:center}@media screen and (max-width: 420px){#quick-about-me,header#main-header details nav{grid-template-columns:1fr}body{width:95%}header#main-header details nav section{padding:.75rem}#quick-about-me img{grid-row:1;max-height:40vh;margin:auto}#quick-about-me div{grid-row:2}#quick-about-me div h1{text-align:center}article.post-list header{flex-direction:column}}
+@import "fonts/ptsansweb/PTC55F_stylesheet.css";
+@import "fonts/ptsansweb/PTS55F_stylesheet.css";
+@import "fonts/ptmonoweb/PTM55F_stylesheet.css";
+.center-text,
+header,
+footer {
+  text-align: center;
+}
+html {
+  box-sizing: border-box;
+  font-family: 'PTSansRegular', Arial, Helvetica, sans-serif;
+  background-color: #f9f8f7;
+  color: #2e2e2e;
+  font-size: 10pt;
+}
+small {
+  font-size: smaller;
+}
+body {
+  margin: auto;
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    justify-content: center;
+    max-width: 70%;
+  }
+}
+body main {
+  width: 100%;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.vmargin-3rem,
+body main,
+header,
+footer {
+  margin: 3rem 0;
+}
+header img {
+  height: 50vw;
+  width: 50vw;
+  border: 1px solid #e3dfda;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  object-position: 0 -20px;
+}
+@media screen and (min-width: 1280px) {
+  header img {
+    height: 13rem;
+    width: 13rem;
+  }
+}
+header h1 {
+  font-size: 2.5rem;
+}
+main nav.stuff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90%;
+  margin: auto;
+}
+main nav.stuff-grid section {
+  margin: 1rem 0;
+}
+main nav.stuff-grid section h1 {
+  font-family: 'PTSansCaption', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+main nav.stuff-grid section ul.links-list li {
+  margin: 0.6rem 0;
+}
+main nav.stuff-grid section ul.links-list li::before {
+  content: '🔗';
+  margin-right: 0.4rem;
+}
+@media screen and (min-width: 1280px) {
+  main nav.stuff-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 75%;
+  }
+  main nav.stuff-grid section {
+    width: auto;
+    margin: 1rem;
+  }
+}
+footer ul.minilist {
+  margin-top: 0.2rem;
+}
+ul.minilist {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+span.mono {
+  font-family: 'PTMonoRegular';
+}
+a[href] {
+  color: dodgerblue;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.1s ease;
+}
+a[href]:visited {
+  color: #6bb6ff;
+}
+a[href]:visited:hover {
+  border-bottom-color: #6bb6ff;
+}
+a[href]:hover {
+  border-bottom-color: dodgerblue;
+}

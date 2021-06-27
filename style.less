@@ -1,0 +1,162 @@
+@import "./fonts/ptsansweb/PTC55F_stylesheet.css";
+@import "./fonts/ptsansweb/PTS55F_stylesheet.css";
+@import "./fonts/ptmonoweb/PTM55F_stylesheet.css";
+
+@pc: ~"screen and (min-width: 1280px)";
+@bg: #f9f8f7;
+
+.center-text {
+    text-align: center
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'PTSansRegular', Arial, Helvetica, sans-serif;
+
+    background-color: @bg;
+    color: rgb(46, 46, 46);
+
+    font-size: 10pt;
+}
+
+small {
+    font-size: smaller;
+}
+
+body {
+    margin: auto;
+    min-height: 100vh;
+    max-width: 100%;
+
+    display: flex;
+    flex-flow: column;
+
+    align-items: center;
+    
+    @media @pc {
+        justify-content: center;
+        max-width: 70%;
+    }
+
+    main {
+        width: 100%;
+        &:extend(.vmargin-3rem);
+    }
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.vmargin-3rem {
+    margin: 3rem 0;
+}
+
+header {
+    &:extend(.center-text, .vmargin-3rem);
+    
+    img {
+        height: 50vw;
+        width: $height;
+        border: 1px solid darken(@bg, 10%);
+        margin-bottom: 1rem;
+        
+        @media @pc {
+            height: 13rem;
+            width: $height;
+        }
+        
+        object-fit: cover;
+        object-position: 0 -20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+main {
+    nav {
+        &.stuff-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 90%;
+            margin: auto;
+
+            section {
+                margin: 1rem 0;
+
+                h1 {
+                    font-family: 'PTSansCaption', Arial, Helvetica, sans-serif;
+                    font-size: 1.5rem;
+                    margin-bottom: .5rem;
+                }
+
+                ul {
+                    &.links-list {
+                        li {
+                            margin: .6rem 0;
+                            &::before {
+                                content: '🔗';
+                                margin-right: .4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @media @pc {
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 75%;
+
+                section {
+                    width: auto;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    &:extend(.center-text, .vmargin-3rem);
+
+    ul {
+        &.minilist {
+            margin-top: .2rem;
+        }
+    }
+}
+
+ul {
+    &.minilist {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+span {
+    &.mono {
+        font-family: 'PTMonoRegular';
+    }
+}
+
+a[href] {
+    color: dodgerblue;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color .1s ease;
+
+    &:visited {
+        color: lighten(dodgerblue, 15%);
+
+        &:hover {
+            border-bottom-color: $color;
+        }
+    }
+
+    &:hover {
+        border-bottom-color: $color;
+    }
+}
