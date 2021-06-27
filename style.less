@@ -2,7 +2,7 @@
 @import "./fonts/ptsansweb/PTS55F_stylesheet.css";
 @import "./fonts/ptmonoweb/PTM55F_stylesheet.css";
 
-@pc: ~"screen and (min-width: 1280px)";
+@pc: ~"screen and (min-width: 1000px)";
 @bg: #f9f8f7;
 
 .center-text {
@@ -142,21 +142,46 @@ span {
     }
 }
 
-a[href] {
-    color: dodgerblue;
-    text-decoration: none;
+a {
+    color: rgb(255, 142, 142);
+    cursor: pointer;        
     border-bottom: 1px solid transparent;
+    text-decoration: none;
     transition: border-bottom-color .1s ease;
+    
+    &:hover {
+        border-bottom-color: $color;
+    }
 
-    &:visited {
-        color: lighten(dodgerblue, 15%);
+    &[href] {    
+        color: dodgerblue;
+
+        &:visited {
+            color: lighten(dodgerblue, 15%);
+
+            &:hover {
+                border-bottom-color: $color;
+            }
+        }
 
         &:hover {
             border-bottom-color: $color;
         }
     }
+}
 
-    &:hover {
-        border-bottom-color: $color;
+h1.error {
+    color: red;
+    font-size: 24pt;    
+}
+
+p {
+    width: 50%;
+    margin: auto;
+    line-height: 1.2;
+
+    &.error {
+        font-size: 14pt;
+        text-align: center;
     }
 }

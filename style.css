@@ -24,7 +24,7 @@ body {
   flex-flow: column;
   align-items: center;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1000px) {
   body {
     justify-content: center;
     max-width: 70%;
@@ -52,7 +52,7 @@ header img {
   object-fit: cover;
   object-position: 0 -20px;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1000px) {
   header img {
     height: 13rem;
     width: 13rem;
@@ -82,7 +82,7 @@ main nav.stuff-grid section ul.links-list li::before {
   content: '🔗';
   margin-right: 0.4rem;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1000px) {
   main nav.stuff-grid {
     grid-template-columns: 1fr 1fr 1fr;
     width: 75%;
@@ -103,11 +103,18 @@ ul.minilist {
 span.mono {
   font-family: 'PTMonoRegular';
 }
+a {
+  color: #ff8e8e;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+  transition: border-bottom-color 0.1s ease;
+}
+a:hover {
+  border-bottom-color: #ff8e8e;
+}
 a[href] {
   color: dodgerblue;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-bottom-color 0.1s ease;
 }
 a[href]:visited {
   color: #6bb6ff;
@@ -117,4 +124,17 @@ a[href]:visited:hover {
 }
 a[href]:hover {
   border-bottom-color: dodgerblue;
+}
+h1.error {
+  color: red;
+  font-size: 24pt;
+}
+p {
+  width: 50%;
+  margin: auto;
+  line-height: 1.2;
+}
+p.error {
+  font-size: 14pt;
+  text-align: center;
 }
