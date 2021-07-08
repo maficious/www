@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursed cats</title>
+  </head>
+  <body>
+    <span id="loading">Loading</span>
+    <main id="results"></main>
+    <script>
+      (async function () {
+        const res = await fetch(
+          "https://mjoork-api.herokuapp.com/cursedcatimages",
+          {
+            method: "GET",
+            mode: "cors",
+            headers: {
+              Authorization: "spelunki",
+            },
+          }
+        );
+
+        res.json().then((data) => {
+          document.getElementById("loading").remove();
+          data.images.forEach((image) => {
+            document.getElementById(
+              "results"
+            ).innerHTML += `<img src="${image.link}" alt="${image.id}"/>`;
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
