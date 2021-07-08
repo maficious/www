@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cursed cats</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cursed Cats</title>
   </head>
   <body>
-    <span id="loading">Loading</span>
+    <div id="loading">
+      <svg id="loading-anim" viewbox="0 0 200 200">
+        <rect x="30" y="30" width="140" height="140" rx="20" />
+      </svg>
+      <p>Loading</p>
+    </div>
     <main id="results"></main>
     <script>
+      const text = document.querySelector("#loading p");
+      let nDots = 1;
+      const loadingIntervalID = setInterval(() => {
+        text.innerHTML = `Loading${".".repeat(nDots)}`;
+        nDots = (nDots + 1) % 4;
+      }, 300);
+
       (async function () {
         const res = await fetch(
           "https://mjoork-api.herokuapp.com/cursedcatimages",
@@ -23,6 +37,7 @@
         );
 
         res.json().then((data) => {
+          clearInterval(loadingIntervalID);
           document.getElementById("loading").remove();
           data.images.forEach((image) => {
             document.getElementById(
