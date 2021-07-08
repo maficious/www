@@ -62,9 +62,9 @@ html {
   border-radius: 0.75rem;
 }
 
-@media screen and (min-width: 1680px) {
+@media screen and (min-width: 720px) {
   #results {
-    column-count: 4;
+    column-count: 2;
   }
 }
 
@@ -74,9 +74,9 @@ html {
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1680px) {
   #results {
-    column-count: 2;
+    column-count: 4;
   }
 }
 
