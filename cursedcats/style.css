@@ -58,7 +58,7 @@ html {
   color: var(--foreground-dim);
   display: inline-block;
   margin: 0 0 1rem;
-  padding: 1rem;
+  border: 0.25rem solid hsla(212, 100%, 50%, 0.26);
   width: 100%;
   border-radius: 0.75rem;
 }
