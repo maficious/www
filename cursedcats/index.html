@@ -9,43 +9,23 @@
     <title>Cursed Cats</title>
   </head>
   <body>
-    <div id="loading">
-      <svg id="loading-anim" viewbox="0 0 200 200">
-        <rect x="30" y="30" width="140" height="140" rx="20" />
-      </svg>
-      <p>Loading</p>
-    </div>
-    <main id="results"></main>
-    <script>
-      const text = document.querySelector("#loading p");
-      let nDots = 1;
-      const loadingIntervalID = setInterval(() => {
-        text.innerHTML = `Loading${".".repeat(nDots)}`;
-        nDots = (nDots + 1) % 4;
-      }, 300);
-
-      (async function () {
-        const res = await fetch(
-          "https://mjoork-api.herokuapp.com/cursedcatimages",
-          {
-            method: "GET",
-            mode: "cors",
-            headers: {
-              Authorization: "spelunki",
-            },
-          }
-        );
-
-        res.json().then((data) => {
-          clearInterval(loadingIntervalID);
-          document.getElementById("loading").remove();
-          data.images.forEach((image) => {
-            document.getElementById(
-              "results"
-            ).innerHTML += `<img src="${image.link}" alt="${image.id}"/>`;
-          });
-        });
-      })();
-    </script>
+    <header>
+      <h1>Cursed 🐈 Images</h1>
+      <h2>
+        "Dose catz picz are maazing!1!!1!"<br /><small
+          >&mdash; happy customer</small
+        >
+      </h2>
+    </header>
+    <main>
+      <noscript>
+        <p>
+          This website doesn't work with javascript enabled. Please enable
+          javascript or you won't be able to see cursed cats.
+        </p>
+      </noscript>
+      <span id="loading"></span>
+    </main>
+    <script defer src="index.js"></script>
   </body>
 </html>
