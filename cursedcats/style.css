@@ -79,7 +79,7 @@ img {
   color: var(--foreground-dim);
   background-color: var(--background-accent);
   display: inline-block;
-  margin: 0 var(--magic-constant);
+  margin: 0 0 var(--magic-constant);
   width: 100%;
   border-radius: var(--magic-constant);
 }
