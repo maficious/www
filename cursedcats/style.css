@@ -70,7 +70,7 @@ small {
   font-size: 0.8em;
 }
 
-main#results {
+main {
   column-gap: var(--magic-constant);
   padding: var(--magic-constant);
 }
@@ -102,19 +102,19 @@ span#loading::before {
 }
 
 @media screen and (min-width: 720px) {
-  main#results {
+  main {
     column-count: 2;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  main#results {
+  main {
     column-count: 3;
   }
 }
 
 @media screen and (min-width: 1680px) {
-  main#results {
+  main {
     column-count: 4;
   }
 }
